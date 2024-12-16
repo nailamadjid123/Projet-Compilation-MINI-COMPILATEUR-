@@ -1,0 +1,26 @@
+VAR_GLOBAL {
+  INTEGER B,N,M;
+}
+DECLARATION {
+  INTEGER X, i, Y;
+FLOAT C;
+   CONST INTEGER A=1;
+}
+INSTRUCTION {
+  Y=5;
+  N = 5;
+  B = 10 + 3;
+  X = Y;
+  %% M = A > B && A < B;
+  %% Condition qui renvoie "true" (A est plus petit que B)
+   IF (  A < B || X > A ) {
+    B = 10 + 10;
+    C = 10.25;
+    WRITE ("A est plus petit que B.");
+     }
+   ELSE {
+    C = 8.36;
+    N = 4 - 2;
+    WRITE ("Ce message ne sera pas affiché.");
+   }
+}
